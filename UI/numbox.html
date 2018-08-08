@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">numbox(数字输入框)</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="mui-numbox" data-numbox-step="10" data-numbox-min='0' data-numbox-max='100'>
+		    	<!--"-"按钮，点击减小当前值-->
+		    	<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+		    	<input class="mui-numbox-input" type="number"  id="box" />
+		    	<!-- "+"按钮，点击可增大当前数值 -->
+		    	<button type="button" class="mui-btn mui-numbox-btn-plus">+</button></br>
+		    </div>
+	    	<button type="button" class="mui-btn mui-btn-blue" id="get">取当前值</button>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			document.getElementById('get').addEventListener('tap',function(event){
+				alert("当前值：" + document.getElementById('box').value);
+			});
+		</script>
+	</body>
+
+</html>
